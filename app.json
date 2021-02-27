@@ -1,0 +1,12 @@
+{
+  "name": "BizTripApp",
+  "displayName": "BizTripApp",
+  "expo": {
+    "name": "BizTripApp",
+    "slug": "BizTripApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
