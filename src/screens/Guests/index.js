@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
+import {useNavigation} from '@react-navigation/native'
 
 import styles from "./styles";
 
@@ -8,10 +9,13 @@ const GuestsScreen = (props) => {
     const [children, setChildren] = useState(0)
     const [infants, setInfants] = useState(0)
 
+    const navigation = useNavigation()
+
 
 
   return (
-    <View>
+    <View style={{justifyContent: 'space-between', height: '100%'}}>
+        <View>
       {/* Row 1: Adults */}
       <View style={styles.row}>
 
@@ -23,22 +27,24 @@ const GuestsScreen = (props) => {
         {/* Buttons with value */}
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           {/* - */}
-          <Pressable
+          <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => setAdults(Math.max(0, adults - 1))}
             style={styles.button}
           >
             <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
-          </Pressable>
+          </TouchableOpacity>
 
           <Text style={{marginHorizontal: 20, fontSize: 16}}>{adults}</Text>
 
             {/* + */}
-          <Pressable
+          <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => setAdults(Math.max(0, adults + 1))}
             style={styles.button}
           >
             <Text style={{fontSize: 20, color: '#474747' }}>+</Text>
-          </Pressable>
+          </TouchableOpacity>
           {/* value */}
           
         </View>
@@ -54,22 +60,24 @@ const GuestsScreen = (props) => {
         {/* Buttons with value */}
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           {/* - */}
-          <Pressable
+          <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => setChildren(Math.max(0, children - 1))}
             style={styles.button}
           >
             <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
-          </Pressable>
+          </TouchableOpacity>
 
           <Text style={{marginHorizontal: 20, fontSize: 16}}>{children}</Text>
 
             {/* + */}
-          <Pressable
+          <TouchableOpacity
+            activeOpacity={0.9}
             onPress={() => setChildren(Math.max(0, children + 1))}
             style={styles.button}
           >
             <Text style={{fontSize: 20, color: '#474747'}}>+</Text>
-          </Pressable>
+          </TouchableOpacity>
           {/* value */}
           
         </View>
@@ -85,27 +93,44 @@ const GuestsScreen = (props) => {
         {/* Buttons with value */}
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           {/* - */}
-          <Pressable
+          <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => setInfants(Math.max(0, infants - 1))}
             style={styles.button}
           >
             <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
-          </Pressable>
+          </TouchableOpacity>
 
           <Text style={{marginHorizontal: 20, fontSize: 16}}>{infants}</Text>
 
             {/* + */}
-          <Pressable
+          <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => setInfants(Math.max(0, infants + 1))}
             style={styles.button}
           >
             <Text style={{fontSize: 20, color: '#474747'}}>+</Text>
-          </Pressable>
+          </TouchableOpacity>
           {/* value */}
           
         </View>
       </View>
-      
+      </View>
+
+      <TouchableOpacity 
+      activeOpacity={0.9}
+      onPress={() => navigation.navigate()}
+      style={{
+          marginBottom: 20, 
+          backgroundColor: '#3498DB', 
+          alignItems: 'center', 
+          justifyContent: 'center',
+          height:  50,
+          marginHorizontal: 20,
+          borderRadius: 10,
+      }}>
+          <Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>Search</Text>
+      </TouchableOpacity>
     </View>
   );
 };
