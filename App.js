@@ -2,10 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import Entype from 'react-native-vector-icons/Entypo'
+import Entypo from 'react-native-vector-icons/Entypo'
 
 import HomeScreen from './src/screens/Home';
 import SearchResultsScreen from './src/screens/SearchResults';
+import DestinationSearchScreen from './src/screens/DestinationSearch';
 import Post from './src/components/Post';
 
 import feed from './assets/data/feed'
@@ -21,7 +22,8 @@ export default function App() {
     
      {/* <HomeScreen /> */}
      {/* <Post post={post1} /> */}
-     <SearchResultsScreen />
+     {/* <SearchResultsScreen /> */}
+     <DestinationSearchScreen />
     
     </SafeAreaView>
     </>
