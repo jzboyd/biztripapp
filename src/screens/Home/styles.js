@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     searchButton: {
-        borderColor: '#187bcd',
+        borderColor: '#3498DB',
         borderWidth: 5,
         backgroundColor: '#fff',
         height: 60,
