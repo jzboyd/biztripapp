@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         color: '#5b5b5b',
         textDecorationLine: 'line-through',
     },
-    price: {
+    newPrice: {
         fontWeight: 'bold',
     },
     totalPrice: {
