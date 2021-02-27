@@ -7,6 +7,7 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import HomeScreen from './src/screens/Home';
 import SearchResultsScreen from './src/screens/SearchResults';
 import DestinationSearchScreen from './src/screens/DestinationSearch';
+import GuestsScreen from './src/screens/Guests';
 import Post from './src/components/Post';
 
 import feed from './assets/data/feed'
@@ -23,7 +24,8 @@ export default function App() {
      {/* <HomeScreen /> */}
      {/* <Post post={post1} /> */}
      {/* <SearchResultsScreen /> */}
-     <DestinationSearchScreen />
+     {/* <DestinationSearchScreen /> */}
+     <GuestsScreen />
     
     </SafeAreaView>
     </>
