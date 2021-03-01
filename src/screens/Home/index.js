@@ -10,7 +10,7 @@ const HomeScreen = (props) => {
     return (
         <View>
             <TouchableOpacity 
-            activeOpacity={0.9}
+            activeOpacity={0.8}
            style={styles.searchButton}
            onPress={() => navigation.navigate('Destination Search')}>
                 <Fontisto name="search" size={25} color={'#3498DB'} />
@@ -20,10 +20,10 @@ const HomeScreen = (props) => {
         source={require('../../../assets/images/hotel.png')} 
         style={styles.image} 
         >
-            <Text style={styles.title}>Biz Go</Text>
+            <Text style={styles.title}>BizTrip</Text>
 
            <TouchableOpacity 
-           activeOpacity={0.9}
+           activeOpacity={0.8}
            style={styles.button}
            onPress={() => console.log('Explore Btn clicked')} 
            >

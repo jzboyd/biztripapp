@@ -11,8 +11,6 @@ const GuestsScreen = (props) => {
 
     const navigation = useNavigation()
 
-
-
   return (
     <View style={{justifyContent: 'space-between', height: '100%'}}>
         <View>
@@ -28,7 +26,7 @@ const GuestsScreen = (props) => {
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           {/* - */}
           <TouchableOpacity
-          activeOpacity={0.9}
+          activeOpacity={0.8}
             onPress={() => setAdults(Math.max(0, adults - 1))}
             style={styles.button}
           >
@@ -39,7 +37,7 @@ const GuestsScreen = (props) => {
 
             {/* + */}
           <TouchableOpacity
-          activeOpacity={0.9}
+          activeOpacity={0.8}
             onPress={() => setAdults(Math.max(0, adults + 1))}
             style={styles.button}
           >
@@ -61,7 +59,7 @@ const GuestsScreen = (props) => {
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           {/* - */}
           <TouchableOpacity
-          activeOpacity={0.9}
+          activeOpacity={0.8}
             onPress={() => setChildren(Math.max(0, children - 1))}
             style={styles.button}
           >
@@ -72,7 +70,7 @@ const GuestsScreen = (props) => {
 
             {/* + */}
           <TouchableOpacity
-            activeOpacity={0.9}
+            activeOpacity={0.8}
             onPress={() => setChildren(Math.max(0, children + 1))}
             style={styles.button}
           >
@@ -94,7 +92,7 @@ const GuestsScreen = (props) => {
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           {/* - */}
           <TouchableOpacity
-          activeOpacity={0.9}
+          activeOpacity={0.8}
             onPress={() => setInfants(Math.max(0, infants - 1))}
             style={styles.button}
           >
@@ -105,7 +103,7 @@ const GuestsScreen = (props) => {
 
             {/* + */}
           <TouchableOpacity
-          activeOpacity={0.9}
+          activeOpacity={0.8}
             onPress={() => setInfants(Math.max(0, infants + 1))}
             style={styles.button}
           >
@@ -118,8 +116,15 @@ const GuestsScreen = (props) => {
       </View>
 
       <TouchableOpacity 
-      activeOpacity={0.9}
-      onPress={() => navigation.navigate()}
+      activeOpacity={0.8}
+      onPress={() => navigation.navigate('Home', {
+        screen: 'Explore',
+        params: {
+          screen: 'SearchResults',
+        },
+      })
+      }
+      
       style={{
           marginBottom: 20, 
           backgroundColor: '#3498DB', 
