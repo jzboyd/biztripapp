@@ -1,17 +1,50 @@
-import React, {useState} from "react";
-import { View, Text } from "react-native";
+import React, {useEffect, useState, useRef} from "react";
+import { View, Text, FlatList, useWindowDimensions } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
-
-import places from "../../../assets/data/feed";
 import CustomMarker from "../../components/CustomMarker";
 import PostCarouselItem from "../../components/PostCarouselItem";
+
+import places from "../../../assets/data/feed";
 
 const SearchResultsMap = (props) => {
   const [selectedPlaceID, setSelectedPlaceId] = useState(null);
 
+  const flatlist = useRef();
+
+  const map = useRef();
+
+  const viewConfig = useRef({itemVisiblePercentThreshold: 70})
+
+  const onViewChanged = useRef(({viewableItems}) => {
+    if (viewableItems.length > 0) {
+      const selectedPlace = viewableItems[0].item;
+      setSelectedPlaceId(selectedPlace.id)
+    }
+})
+
+  const width = useWindowDimensions().width;
+
+  useEffect(() => {
+    if(!selectedPlaceID || !flatlist) {
+      return;
+    }
+    const index = places.findIndex(place => place.id === selectedPlaceID)
+  flatlist.current.scrollToIndex({index})
+
+  const selectedPlace = places[index];
+  const region = {
+    latitude: selectedPlace.coordinate.latitude,
+    longitude: selectedPlace.coordinate.longitude,
+    latitudeDelta: 0.8,
+    longitudeDelta: 0.8,
+  }
+  map.current.animateToRegion(region);
+  }, [selectedPlaceID])
+
   return (
     <View style={{ width: "100%", height: "100%" }}>
       <MapView
+      ref={map}
         style={{ width: "100%", height: "100%" }}
         provider={PROVIDER_GOOGLE}
         initialRegion={{
@@ -31,8 +64,19 @@ const SearchResultsMap = (props) => {
         )}
       </MapView>
 
-      <View style={{position: 'absolute', bottom: 40}}>
-        <PostCarouselItem post={places[0]} />
+      <View style={{position: 'absolute', bottom: 10}}>
+        <FlatList 
+        ref={flatlist}
+        data={places}
+        renderItem={({item}) => <PostCarouselItem post={item} />}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        snapToInterval={width - 60}
+        snapToAlignment={"center"}
+        decelerationRate={"fast"}
+        viewabilityConfig={viewConfig.current}
+        onViewableItemsChanged={onViewChanged.current}
+        />
       </View>
     </View>
   );

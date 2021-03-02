@@ -59,7 +59,7 @@ const HomeTabNavigator = (props) => {
             component={HomeScreen}
             options={{
                 tabBarIcon: ({color}) => (
-                    <EvilIcons name="user" size={25} color={color} />
+                    <EvilIcons name="user" size={35} color={color} />
                 )
             }}
             />  
