@@ -4,11 +4,19 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
-        margin: 20,
+        padding: 20,
+        height: '100%',
+        backgroundColor: '#fff'
     },
     textInput: {
         fontSize: 20,
         marginBottom: 20,
+        backgroundColor: '#fff',
+        paddingVertical: 15,
+        paddingHorizontal: 15,
+        borderRadius: 10,
+        borderColor: '#3498DB',
+        borderWidth: 5
     },
     row: {
         flexDirection: 'row',
