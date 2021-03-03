@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     height: 400,
     resizeMode: 'cover',
     justifyContent: 'center',
-    marginVertical: 40,
+    marginVertical: 100,
     },
     title: {
         fontSize: 70,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        top: 50,
+        top: 60,
         zIndex: 100,
     },
     searchButtonText: {

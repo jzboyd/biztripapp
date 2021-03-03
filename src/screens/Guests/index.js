@@ -124,11 +124,11 @@ const GuestsScreen = (props) => {
           })
         }
         style={{
-          marginBottom: 20,
+          marginBottom: 30,
           backgroundColor: "#3498DB",
           alignItems: "center",
           justifyContent: "center",
-          height: 50,
+          height: 60,
           marginHorizontal: 20,
           borderRadius: 10,
         }}

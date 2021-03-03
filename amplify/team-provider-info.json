@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-biztripapp-dev-01353-authRole",
+      "UnauthRoleArn": "arn:aws:iam::983120593678:role/amplify-biztripapp-dev-01353-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::983120593678:role/amplify-biztripapp-dev-01353-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-biztripapp-dev-01353-deployment",
+      "UnauthRoleName": "amplify-biztripapp-dev-01353-unauthRole",
+      "StackName": "amplify-biztripapp-dev-01353",
+      "StackId": "arn:aws:cloudformation:us-east-1:983120593678:stack/amplify-biztripapp-dev-01353/a1c4e770-7be7-11eb-8ae2-12d7a78ee1f9",
+      "AmplifyAppId": "d375h8ltbfm5kq"
+    }
+  }
+}

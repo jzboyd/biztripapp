@@ -1,22 +1,22 @@
 export default [
   {
     id: "0",
-    description: "Tenerife, Canary Islands",
+    description: "Dallas, West Village",
   },
   {
     id: "1",
-    description: "Tenerife, Santa Cruz de Tenerife",
+    description: "Dallas, Downtown",
   },
   {
     id: "2",
-    description: "Tenerife, El Medano",
+    description: "Dallas, Plano",
   },
   {
     id: "3",
-    description: "Tenerife, Costa Adeje",
+    description: "Dallas, Uptown",
   },
   {
     id: "4",
-    description: "Tenerife, Puerto de la Cruz",
+    description: "Dalls, Park City",
   },
 ];
