@@ -13,8 +13,10 @@ import Router from './src/navigation/Router';
 
 // import feed from './assets/data/feed'
 
+import { withAuthenticator } from 'aws-amplify-react-native'
 
-export default function App() {
+
+const App = () => {
   return (
     <>
     <StatusBar barStyle="default" />
@@ -23,3 +25,4 @@ export default function App() {
   );
 }
 
+export default withAuthenticator(App);

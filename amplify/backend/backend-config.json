@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "biztripapp3771e799": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
