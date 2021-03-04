@@ -1,12 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Dimensions, StyleSheet, Text, View } from 'react-native'
 
 
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        height: '100%',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        zIndex: 1,
+        position: 'absolute',
+        width: Dimensions.get('screen').width -20,
     },
     textInput: {
         fontSize: 20,
@@ -14,9 +16,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         paddingVertical: 15,
         paddingHorizontal: 15,
-        borderRadius: 10,
+        borderRadius: 30,
         borderColor: '#3498DB',
-        borderWidth: 5
+        borderWidth: 5,
+        zIndex: 0,
     },
     row: {
         flexDirection: 'row',

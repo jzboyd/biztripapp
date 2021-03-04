@@ -1,0 +1,12 @@
+projects:
+  biztripapp:
+    schemaPath: Users/joelzisholtz/Desktop/Projects/BizTripApp/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql

@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent: 'center',
     marginVertical: 100,
+    zIndex: 0,
     },
     title: {
         fontSize: 70,
