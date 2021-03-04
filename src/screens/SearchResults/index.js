@@ -7,16 +7,26 @@ import { listPosts } from '../../graphql/queries';
 import { useEffect, useState } from 'react';
 
 
+
 const SearchResultsScreen = (props) => {
 
+    const { guests } = props;
+
     const [posts, setPosts] = useState([]);
+
 
     useEffect(() => {
        const fetchPosts = async () => {
            try {
 
             const postsRestult = await API.graphql(
-                graphqlOperation(listPosts)
+                graphqlOperation(listPosts, {
+                    filter: {
+                        maxGuests: {
+                            ge: guests
+                        }
+                    }
+                })
             )
             setPosts(postsResult.data.listPosts.items);
            } catch (e) {

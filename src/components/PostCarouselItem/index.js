@@ -54,3 +54,4 @@ const Post = (props) => {
 export default Post;
 
 // 'https://media.istockphoto.com/vectors/hotel-room-or-bedroom-interior-flat-design-home-furniture-vector-id964970390?b=1&k=6&m=964970390&s=612x612&w=0&h=EHwAaZIENlvTkW5IlGntJ_E9XoUU8i2pCrKXQI9TGPI='
+
