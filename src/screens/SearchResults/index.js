@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 const SearchResultsScreen = (props) => {
 
-    const { guests } = props;
+    const { guests, viewport } = props;
 
     const [posts, setPosts] = useState([]);
 
@@ -19,7 +19,7 @@ const SearchResultsScreen = (props) => {
        const fetchPosts = async () => {
            try {
 
-            const postsRestult = await API.graphql(
+            const postsResult = await API.graphql(
                 graphqlOperation(listPosts, {
                     filter: {
                         maxGuests: {

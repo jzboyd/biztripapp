@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
     height: 400,
     resizeMode: 'cover',
     justifyContent: 'center',
-    marginVertical: 100,
-    zIndex: 0,
+    zIndex: 1,
     },
     title: {
         fontSize: 70,
@@ -16,7 +15,6 @@ const styles = StyleSheet.create({
         width: '70%',
         marginLeft: 20,
         marginTop: 250,
-    
     },
     button: {
         borderColor: '#3498DB',

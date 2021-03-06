@@ -6,6 +6,7 @@ import {
   FlatList,
   Pressable,
   TouchableOpacity,
+  SafeAreaView,
 } from "react-native";
 import styles from "./styles";
 import Entypo from "react-native-vector-icons/Entypo";
@@ -21,7 +22,7 @@ const DestinationSearchScreen = (props) => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* input component */}
 
       <GooglePlacesAutocomplete
@@ -43,7 +44,7 @@ const DestinationSearchScreen = (props) => {
         suppressDefaultStyles
         renderRow={(item) => <SuggestionRow item={item} />}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
